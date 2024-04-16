@@ -5,7 +5,7 @@ from Resources.BrowserUtil.Browser import Browser
 driver = None
 
 
-@pytest.fixture(scope="class")
+@pytest.fixture(scope="function")
 def setup(request):
     global driver
     browser = Browser()
