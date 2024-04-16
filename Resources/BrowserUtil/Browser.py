@@ -88,7 +88,6 @@ class Browser:
     def go_to_url(self):
         print("Navigating to the webpage")
         self.web_driver.get(self.application_settings.get_test_url())
-        print("Navigated to the webpage")
 
     def close_browser(self):
         self.web_driver.close()
