@@ -1,0 +1,8 @@
+Reports/AllureReports/
+Reports/HTMLReports/
+Reports/Logs/logfile.log
+Reports/Screenshots/*.png
+Reports/XMLReports/
+Reports/allure-results/
+test.py
+.idea/
