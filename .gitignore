@@ -6,3 +6,4 @@ Reports/XMLReports/
 Reports/allure-results/
 test.py
 .idea/
+__pycache__/
