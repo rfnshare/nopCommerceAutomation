@@ -7,3 +7,4 @@ Reports/allure-results/
 test.py
 .idea/
 __pycache__/
+geckodriver.log
