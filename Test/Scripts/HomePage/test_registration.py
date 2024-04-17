@@ -1,8 +1,5 @@
-import time
-
 import allure
 import pytest
-
 from Src.PageObject.Pages.HomePage import HomePage
 from Src.TestBase.WebDriverSetup import WebDriverSetup
 from Test.TestData.HomePageData import HomePageData
@@ -28,5 +25,7 @@ class TestRegistration(WebDriverSetup):
         home_page.set_user_options(test_data['status'])  # User set Newsletter option as <status>
         home_page.set_user_password(test_data['password'])  # User set <password> as password and confirm password again
         home_page.confirm_registration()  # User click on the Register button
-        assert test_data['msg'] in home_page.verify_registration()  # Verify that the new account registration message <msg> is displayed
-        log.info(f"Verify that the new account registration message {test_data['msg']} is displayed")
+        assert test_data[
+                   'msg'] in home_page.verify_registration()  # Verify that the new account registration message <msg> is displayed
+        log.info(
+            f"Verified that new account registration message {test_data['msg']} is displayed. Email: {test_data['dynamicemail']}")

@@ -1,6 +1,8 @@
 import glob
 import os
 from datetime import datetime
+import random
+import string
 
 
 # Read current date
@@ -24,6 +26,12 @@ def read_time():
 
 def take_standard_screenshot(driver, file_name):
     driver.save_screenshot(file_name, False)
+
+
+def generate_email():
+    domain = "example.com"  # Change this to your desired domain
+    username = ''.join(random.choices(string.ascii_lowercase, k=8))
+    return f"{username}@{domain}"
 
 
 def get_html_reports(report_type):
