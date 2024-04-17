@@ -1,5 +1,7 @@
 import allure
 import pytest
+
+from Resources.GeneralUtils import store_info
 from Src.PageObject.Pages.HomePage import HomePage
 from Src.TestBase.WebDriverSetup import WebDriverSetup
 from Test.TestData.HomePageData import HomePageData
@@ -29,3 +31,4 @@ class TestRegistration(WebDriverSetup):
                    'msg'] in home_page.verify_registration()  # Verify that the new account registration message <msg> is displayed
         log.info(
             f"Verified that new account registration message {test_data['msg']} is displayed. Email: {test_data['dynamicemail']}")
+        store_info("Registration", request_payload=test_data, response_payload="Success")
