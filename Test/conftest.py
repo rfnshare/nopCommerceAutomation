@@ -37,7 +37,7 @@ def pytest_runtest_makereport(item):
             _capture_screenshot(SS_PATH / file_name)
             if file_name:
                 html = (
-                    '<div><img src="../../Screenshots/%s" alt="screenshot" style="width:304px;height:228px;" '
+                    '<div><img src="../Screenshots/%s" alt="screenshot" style="width:304px;height:228px;" '
                     'onclick="window.open(this.src)" align="right"/></div>' % file_name
                 )
                 extra.append(pytest_html.extras.html(html))

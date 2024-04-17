@@ -7,8 +7,7 @@ from Src.TestBase.WebDriverSetup import WebDriverSetup
 @allure.title("Login Test")
 @allure.description("Checking Login Function")
 class TestLoginPage(WebDriverSetup):
-    @pytest.mark.smoke
+    @pytest.mark.regression
     def test_01_login(self):
         log = self.get_logger()
-        pass
-
+        assert 1 == 2
